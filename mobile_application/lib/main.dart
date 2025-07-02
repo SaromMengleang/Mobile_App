@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:mobile_application/basic_module/basic_app.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(BasicApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
 
+<<<<<<< Updated upstream
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -34,4 +34,6 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+=======
+>>>>>>> Stashed changes
 
