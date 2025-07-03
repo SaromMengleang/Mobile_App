@@ -98,12 +98,12 @@ class _VideoScreenState extends State<VideoScreen> {
         Row(
           children: [
             Container(
-              padding: const EdgeInsets.all(2),
+              padding:EdgeInsets.all(2),
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 border: Border.all(color: Colors.white, width: 2),
               ),
-              child: const CircleAvatar(
+              child: CircleAvatar(
                 radius: 22,
                 backgroundImage: NetworkImage(
                   'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf6t96mkGf6py35-o8JCFIo4zU_Yf_loFUkw&s',
