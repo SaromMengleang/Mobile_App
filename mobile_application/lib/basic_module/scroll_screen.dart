@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mobile/basic_module/photo_contant.dart';
+import 'photo_contant.dart';
 
 class VideoScreen extends StatefulWidget {
   const VideoScreen({super.key});

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:mobile_application/basic_module/font_theme.dart';
-import 'package:mobile_application/basic_module/main_screen.dart';
-import 'package:mobile_application/basic_module/theme_screen.dart';
+import 'package:mobile_application/basic_module/login.dart';
+import 'font_theme.dart';
+import 'main_screen.dart';
+import 'theme_screen.dart';
 import 'package:provider/provider.dart';
 
 
@@ -15,7 +16,7 @@ class BasicApp extends StatelessWidget {
     bool dark = context.watch<ThemeLogic>().dark;
     _size = context.watch<FontLogic>().size;
     return MaterialApp(
-      home: MainScreen(),
+      home: LoginPage(),
       themeMode: dark ? ThemeMode.dark : ThemeMode.light,
       theme: _lightTheme(),
       darkTheme: _darkTheme(),

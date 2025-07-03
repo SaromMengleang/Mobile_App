@@ -54,7 +54,7 @@ class InstagramHomePage extends StatelessWidget {
           // Feed
           Expanded(
             child: ListView.builder(
-              itemCount: 5,
+              itemCount: 50,
               itemBuilder: (context, index) => Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -91,7 +91,8 @@ class InstagramHomePage extends StatelessWidget {
                   ),
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 12),
-                    child: Text('Liked by user123 and others'),
+                    child: Text('Liked by user123 and others'
+                        ' kenh hx sart nas bres mjas tley hx'),
                   ),
                   SizedBox(height: 12),
                 ],
