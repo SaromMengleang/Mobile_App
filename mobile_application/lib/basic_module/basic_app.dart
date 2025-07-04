@@ -11,6 +11,8 @@ import 'theme_screen.dart';
 class BasicApp extends StatelessWidget {
   // const BasicApp({super.key});
   double _size = 0;
+
+  BasicApp({super.key});
   @override
   Widget build(BuildContext context) {
     bool dark = context.watch<ThemeLogic>().dark;
