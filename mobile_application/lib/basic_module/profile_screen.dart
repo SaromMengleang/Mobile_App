@@ -6,10 +6,8 @@ class ProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.black,
         appBar: AppBar(
-          title: const Text("rizenjoe"),
-          backgroundColor: Colors.black,
+          title: Text("izme_Wonie Tixi"),
           actions: const [
             Icon(Icons.link),
             SizedBox(width: 10),
@@ -56,9 +54,9 @@ class ProfilePage extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: const [
-              Text("Wonie Tixi", style: TextStyle(color: Colors.white, fontSize: 18)),
+              Text("@Wonie_Tixi", style: TextStyle(color: Color.fromARGB(255, 13, 13, 13), fontSize: 20)),
               SizedBox(height: 4),
-              Text("What's new?", style: TextStyle(color: Colors.grey)),
+              Text("What's new?", style: TextStyle(color: Color.fromARGB(255, 9, 9, 9))),
             ],
           ),
         ],
