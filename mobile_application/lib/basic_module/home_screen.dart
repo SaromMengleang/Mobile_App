@@ -6,26 +6,32 @@ class InstagramHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          'Fuck You',
-          style: TextStyle(
-            fontFamily: 'Billabong',
-            fontSize: 32,
-            color: Colors.black,
-          ),
-        ),
-        backgroundColor: Colors.white,
-        elevation: 1,
-        actions: [
-          Icon(Icons.favorite_border, color: Colors.black),
-          SizedBox(width: 16),
-          Icon(Icons.messenger_outline, color: Colors.black),
-          SizedBox(width: 12),
-        ],
-      ),
       body: Column(
         children: [
+          // Custom Header (Title and Icons)
+          Padding(
+            padding: const EdgeInsets.only(top: 40, left: 16, right: 16, bottom: 12),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  'fuck you',
+                  style: TextStyle(
+                    fontFamily: 'Billabong',
+                    fontSize: 32,
+                  ),
+                ),
+                Row(
+                  children: const [
+                    Icon(Icons.favorite_border),
+                    SizedBox(width: 16),
+                    Icon(Icons.messenger_outline),
+                  ],
+                ),
+              ],
+            ),
+          ),
+
           // Stories
           SizedBox(
             height: 100,
@@ -43,14 +49,14 @@ class InstagramHomePage extends StatelessWidget {
                       NetworkImage('https://i.pravatar.cc/150?img=$index'),
                     ),
                     SizedBox(height: 4),
-                    Text('User$index',
-                        style: TextStyle(fontSize: 12)),
+                    Text('User$index', style: TextStyle(fontSize: 18)),
                   ],
                 ),
               ),
             ),
           ),
           Divider(),
+
           // Feed
           Expanded(
             child: ListView.builder(
@@ -91,8 +97,9 @@ class InstagramHomePage extends StatelessWidget {
                   ),
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 12),
-                    child: Text('Liked by user123 and others'
-                        ' kenh hx sart nas bres mjas tley hx'),
+                    child: Text(
+                      'Liked by user123 and others kenh hx sart nas bres mjas tley hx',
+                    ),
                   ),
                   SizedBox(height: 12),
                 ],
