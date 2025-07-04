@@ -12,7 +12,7 @@ class _VideoScreenState extends State<VideoScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      // backgroundColor: Colors.black,
       body: SafeArea(child: _buildBody()),
     );
   }
@@ -77,17 +77,19 @@ class _VideoScreenState extends State<VideoScreen> {
     return Column(
       mainAxisAlignment: MainAxisAlignment.end,
       children: const [
-        Icon(Icons.favorite_border, color: Colors.white, size: 32),
-        SizedBox(height: 4),
-        Text("13.2M", style: TextStyle(color: Colors.white)),
-        SizedBox(height: 24),
-        Icon(Icons.share, color: Colors.white, size: 30),
-        SizedBox(height: 4),
-        Text("4.1M", style: TextStyle(color: Colors.white)),
-        SizedBox(height: 24),
-        Icon(Icons.comment, color: Colors.white, size: 30),
-        SizedBox(height: 4),
-        Text("49.3K", style: TextStyle(color: Colors.white)),
+        SizedBox(height: 20),
+        Icon(Icons.favorite, color: Color.fromARGB(255, 225, 45, 32), size: 32),
+        Text("25.5M", style: TextStyle(color: Colors.white)),
+        SizedBox(height: 20),
+        Icon(Icons.comment, color: Colors.white, size: 32),
+        Text("1.5M", style: TextStyle(color: Colors.white)),
+        SizedBox(height: 20),
+        Icon(Icons.bookmark_outlined, color: Colors.white, size: 32),
+        Text("1.7M", style: TextStyle(color: Colors.white)),
+        SizedBox(height: 20),
+        Icon(Icons.share, color: Colors.white, size: 32),
+        Text("1.1M", style: TextStyle(color: Colors.white)),
+        SizedBox(height: 20),
       ],
     );
   }
@@ -101,24 +103,18 @@ class _VideoScreenState extends State<VideoScreen> {
               padding:EdgeInsets.all(2),
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                border: Border.all(color: Colors.white, width: 2),
+                border: Border.all(color: const Color.fromARGB(255, 36, 243, 78), width: 2),
               ),
               child: CircleAvatar(
                 radius: 22,
                 backgroundImage: NetworkImage(
-                  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf6t96mkGf6py35-o8JCFIo4zU_Yf_loFUkw&s',
+                  'https://images.genius.com/28f3f303c54e8f1a3bfb81e9b992d8cf.1000x1000x1.png',
                 ),
               ),
             ),
             const SizedBox(width: 8),
-            const Text(
-              "@TIXI",
-              style: TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.w600,
-                fontSize: 16,
-              ),
-            ),
+            const Text("@JENNIE_ruby", style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold)),
+            
             const SizedBox(width: 8),
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
@@ -127,21 +123,18 @@ class _VideoScreenState extends State<VideoScreen> {
                 borderRadius: BorderRadius.circular(12),
               ),
               child: const Text(
-                "Follow",
+                "Following",
                 style: TextStyle(color: Colors.white, fontSize: 17),
               ),
             )
           ],
         ),
         const SizedBox(height: 12),
-        const Text(
-          "Hi BABE #AUB #viral #Student",
-          style: TextStyle(
-            fontSize: 17,
-            color: Colors.white,
-            height: 1.4,
-          ),
-        ),
+        const Text("Ruby is the debut solo studio album by South Korean singer and rapper Jennie.",
+            style: TextStyle(fontSize: 18, color: Colors.white)),
+        const Text("#kimjennie#JENNIe#RUBY#Blink",
+            style: TextStyle(fontSize: 18, color: Colors.white)),
+
       ],
     );
   }

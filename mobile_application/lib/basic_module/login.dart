@@ -18,13 +18,13 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     const img =
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf6t96mkGf6py35-o8JCFIo4zU_Yf_loFUkw&s";
+        "https://tse2.mm.bing.net/th/id/OIP.DexBeSiGPUP4igHscKierwHaCi?rs=1&pid=ImgDetMain&o=7&rm=3";
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Login"),
-        automaticallyImplyLeading: false, //  Removes the back button
-      ),
+      // appBar: AppBar(
+      //   title: const Text("Login"),
+      //   automaticallyImplyLeading: false, //  Removes the back button
+      // ),
       body: Center(
         child: SingleChildScrollView(
           padding: const EdgeInsets.all(20),
@@ -56,14 +56,14 @@ class _LoginPageState extends State<LoginPage> {
         labelText: "Email",
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
       ),
-      validator: (value) {
-        if (value == null || value.trim().isEmpty) {
-          return "Email is required";
-        } else if (!value.contains('@') || !value.contains('.')) {
-          return "Enter a valid email";
-        }
-        return null;
-      },
+      // validator: (value) {
+      //   if (value == null || value.trim().isEmpty) {
+      //     return "Email is required";
+      //   } else if (!value.contains('@') || !value.contains('.')) {
+      //     return "Enter a valid email";
+      //   }
+      //   return null;
+
     );
   }
 
@@ -84,14 +84,14 @@ class _LoginPageState extends State<LoginPage> {
           },
         ),
       ),
-      validator: (value) {
-        if (value == null || value.trim().isEmpty) {
-          return "Password is required";
-        } else if (value.length < 4) {
-          return "Password too short";
-        }
-        return null;
-      },
+      // validator: (value) {
+      //   if (value == null || value.trim().isEmpty) {
+      //     return "Password is required";
+      //   } else if (value.length < 4) {
+      //     return "Password too short";
+      //   }
+      //   return null;
+      // },
     );
   }
 
@@ -113,7 +113,7 @@ class _LoginPageState extends State<LoginPage> {
             );
           }
         },
-        child: const Text("Login"),
+        child: const Text("Login",style: TextStyle(color: Colors.pink)),
       ),
     );
   }
