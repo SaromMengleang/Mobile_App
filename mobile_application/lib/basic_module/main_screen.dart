@@ -1,8 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'home_screen.dart';
+import 'package:mobile_application/basic_module/home_screen.dart';
+
 import 'package:mobile_application/basic_module/profile_screen.dart';
-import 'scroll_screen.dart';
+import 'package:mobile_application/basic_module/scroll_screen.dart';
+
 import 'package:mobile_application/basic_module/search_screen.dart';
 import 'package:mobile_application/basic_module/theme_screen.dart';
 import 'package:provider/provider.dart';
