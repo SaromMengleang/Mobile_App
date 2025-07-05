@@ -82,7 +82,58 @@ class MainScreenState extends State<MainScreen> {
     return Drawer(
       child: ListView(
         children: [
-          DrawerHeader(child: Icon(Icons.face, size: 100)),
+          DrawerHeader(
+            child: Center(
+              child: Stack(
+                alignment: Alignment.center,
+                children: [
+                  // Avatar with Instagram gradient border
+                  Container(
+                    padding: EdgeInsets.all(4), // Border thickness
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      gradient: LinearGradient(
+                        colors: [
+                          Color(0xFFFEDA77),
+                          Color(0xFFF58529),
+                          Color(0xFFDD2A7B),
+                          Color(0xFF8134AF),
+                          Color(0xFF515BD4),
+                        ],
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight,
+                      ),
+                    ),
+                    child: Container(
+                      padding: EdgeInsets.all(2), 
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.white,
+                      ),
+                      child: CircleAvatar(
+                        radius: 40,
+                        backgroundImage: NetworkImage(
+                          "https://images.genius.com/28f3f303c54e8f1a3bfb81e9b992d8cf.1000x1000x1.png",
+                        ),
+                      ),
+                    ),
+                  ),
+
+                  // Positioned Add icon (bottom right)
+                  Positioned(
+                    bottom: 0,
+                    right: 0,
+                    child: CircleAvatar(
+                      radius: 12,
+                      backgroundColor: Colors.blue,
+                      child: Icon(Icons.add, size: 16, color: Colors.white),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+
           ListTile(
             leading: Icon(Icons.home),
             title: Text("Home"),

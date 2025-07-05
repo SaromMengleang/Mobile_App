@@ -9,7 +9,7 @@ class ProfilePage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            _buildCustomHeader(),        // <- Replaces AppBar
+            _buildCustomHeader(),        
             _buildProfileHeader(),
             _buildProfileStats(),
             _buildActionButtons(),
@@ -28,7 +28,7 @@ class ProfilePage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           const Text(
-            "izme_Wonie Tixi",
+            "Izme_@JENNIE_",
             style: TextStyle(
               fontSize: 20,
               fontWeight: FontWeight.bold,
@@ -56,10 +56,35 @@ class ProfilePage extends StatelessWidget {
           Stack(
             alignment: Alignment.bottomRight,
             children: [
-              CircleAvatar(
-                radius: 40,
-                backgroundImage:
-                NetworkImage("https://i.imgur.com/QCNbOAo.png"),
+              Container(
+                padding: EdgeInsets.all(4), // Border thickness
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  gradient: LinearGradient(
+                    colors: [
+                      Color(0xFFFEDA77), 
+                      Color(0xFFF58529), 
+                      Color(0xFFDD2A7B), 
+                      Color(0xFF8134AF), 
+                      Color(0xFF515BD4), 
+                    ],
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                  ),
+                ),
+                child: Container(
+                  padding: EdgeInsets.all(2), 
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Colors.white,
+                  ),
+                  child: CircleAvatar(
+                    radius: 40,
+                    backgroundImage: NetworkImage(
+                      "https://images.genius.com/28f3f303c54e8f1a3bfb81e9b992d8cf.1000x1000x1.png",
+                    ),
+                  ),
+                ),
               ),
               CircleAvatar(
                 radius: 12,
@@ -72,7 +97,7 @@ class ProfilePage extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: const [
-              Text("@Wonie_Tixi", style: TextStyle(fontSize: 20)),
+              Text("@JENNIE_ruby", style: TextStyle(fontSize: 20)),
               SizedBox(height: 4),
               Text("What's new?"),
             ],

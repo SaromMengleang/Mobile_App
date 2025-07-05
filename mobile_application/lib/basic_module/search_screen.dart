@@ -39,14 +39,15 @@ class _SearchScreenState extends State<SearchScreen> {
 
     return ListView(
       children: [
-        const SizedBox(height: 40), // Top padding for status bar
+        const SizedBox(height: 30), // Top padding for status bar
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: TextField(
+            style: TextStyle(color: Colors.black),
             decoration: InputDecoration(
               hintText: 'Search',
               filled: true,
-              fillColor: Colors.grey.shade200,
+              fillColor: Colors.grey.shade300,
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(75),
                 borderSide: BorderSide.none,
@@ -66,14 +67,39 @@ class _SearchScreenState extends State<SearchScreen> {
         const Divider(),
         ...recentSearches.map((account) {
           return ListTile(
-            leading: CircleAvatar(
-              backgroundImage: NetworkImage(account['image']!),
+            leading: Container(
+              padding: EdgeInsets.all(3), 
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                gradient: LinearGradient(
+                  colors: [
+                    Color(0xFFFEDA77), 
+                    Color(0xFFF58529), 
+                    Color(0xFFDD2A7B), 
+                    Color(0xFF8134AF), 
+                    Color(0xFF515BD4), 
+                  ],
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                ),
+              ),
+              child: Container(
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: Colors.white, 
+                ),
+                padding: EdgeInsets.all(2), 
+                child: CircleAvatar(
+                  radius: 24,
+                  backgroundImage: NetworkImage(account['image']!),
+                ),
+              ),
             ),
             title: Text(account['username']!),
             subtitle: Text(account['description']!),
-            trailing: const Icon(Icons.close),
+            trailing: Icon(Icons.close),
           );
-        }),
+        }).toList(),
       ],
     );
   }
