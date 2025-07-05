@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_application/basic_module/login.dart';
-import 'package:mobile_application/basic_module/main_screen.dart';
+// import 'package:mobile_application/basic_module/main_screen.dart';
 import 'font_theme.dart';
 import 'package:provider/provider.dart';
 import 'theme_screen.dart';
@@ -27,11 +27,12 @@ class BasicApp extends StatelessWidget {
         mode = ThemeMode.system;
     }
     return MaterialApp(
-      home: MainScreen(),
+      home: LoginPage(),
       themeMode: mode,
       theme: _lightTheme(),
       darkTheme: _darkTheme(),
     );
+    
   }
 
   ThemeData _lightTheme() {
