@@ -14,18 +14,12 @@ class InstagramHomePage extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
-                  'fuck you',
-                  style: TextStyle(
-                    fontFamily: 'Billabong',
-                    fontSize: 32,
-                  ),
-                ),
+                Image.network("https://tse2.mm.bing.net/th/id/OIP.DexBeSiGPUP4igHscKierwHaCi?rs=1&pid=ImgDetMain&o=7&rm=3",width:175.0),
                 Row(
                   children: const [
-                    Icon(Icons.favorite_border),
+                    Icon(Icons.favorite_border,size: 30.0,color: Colors.red),
                     SizedBox(width: 16),
-                    Icon(Icons.messenger_outline),
+                    Icon(Icons.messenger_outline,size: 30.0),
                   ],
                 ),
               ],
@@ -43,13 +37,20 @@ class InstagramHomePage extends StatelessWidget {
                 padding: EdgeInsets.symmetric(horizontal: 8),
                 child: Column(
                   children: [
-                    CircleAvatar(
+                    Container(
+                      decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      border: Border.all(color: const Color.fromARGB(255, 240, 30, 121), width: 3),
+                      ),
+                      child:CircleAvatar(
                       radius: 30,
                       backgroundImage:
                       NetworkImage('https://i.pravatar.cc/150?img=$index'),
+                      ),
                     ),
                     SizedBox(height: 4),
                     Text('User$index', style: TextStyle(fontSize: 18)),
+                    
                   ],
                 ),
               ),
@@ -70,7 +71,7 @@ class InstagramHomePage extends StatelessWidget {
                       backgroundImage:
                       NetworkImage('https://i.pravatar.cc/150?img=$index'),
                     ),
-                    title: Text('User$index'),
+                    title: Text('User$index',style: TextStyle(fontSize: 18)),
                     trailing: Icon(Icons.more_vert),
                   ),
                   // Post image
