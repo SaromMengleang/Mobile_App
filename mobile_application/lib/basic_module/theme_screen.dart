@@ -1,21 +1,27 @@
 import 'package:flutter/material.dart';
 
-class ThemeLogic extends ChangeNotifier{
-  bool _dark = false;
-  bool get dark => _dark;
+class ThemeLogic extends ChangeNotifier {
+  int _themeIndex = 0; //system mode
+  int get themeIndex => _themeIndex;
 
-  void setDark(bool value){
-    _dark = value;
+  void setTheme(int index) {
+    _themeIndex = index;
     notifyListeners();
   }
 
-  void changeToDark(){
-    _dark = true;
+  void changeToSystem() {
+    _themeIndex = 0;
     notifyListeners();
   }
 
-  void changeToLight(){
-    _dark = false;
+  void changeToDark() {
+    _themeIndex = 1;
     notifyListeners();
   }
+
+  void changeToLight() {
+    _themeIndex = 2;
+    notifyListeners();
+  }
+
 }

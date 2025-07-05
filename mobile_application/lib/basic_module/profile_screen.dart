@@ -6,28 +6,45 @@ class ProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text("izme_Wonie Tixi"),
-          actions: const [
-            Icon(Icons.link),
-            SizedBox(width: 10),
-            Icon(Icons.add_box_outlined),
-            SizedBox(width: 10),
-            Icon(Icons.menu),
-            SizedBox(width: 10),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            _buildCustomHeader(),        // <- Replaces AppBar
+            _buildProfileHeader(),
+            _buildProfileStats(),
+            _buildActionButtons(),
+            _buildTabIcons(),
+            _buildPostGrid(),
           ],
         ),
-        body: SingleChildScrollView(
-          child: Column(
-            children: [
-              _buildProfileHeader(),
-              _buildProfileStats(),
-              _buildActionButtons(),
-              _buildTabIcons(),
-              _buildPostGrid(),
+      ),
+    );
+  }
+
+  Widget _buildCustomHeader() {
+    return Padding(
+      padding: const EdgeInsets.only(top: 50, left: 16, right: 16, bottom: 16),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          const Text(
+            "izme_Wonie Tixi",
+            style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          Row(
+            children: const [
+              Icon(Icons.link),
+              SizedBox(width: 10),
+              Icon(Icons.add_box_outlined),
+              SizedBox(width: 10),
+              Icon(Icons.menu),
             ],
           ),
-        )
+        ],
+      ),
     );
   }
 
@@ -39,51 +56,25 @@ class ProfilePage extends StatelessWidget {
           Stack(
             alignment: Alignment.bottomRight,
             children: [
-              Container(
-                padding: EdgeInsets.all(4), // Border thickness
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  gradient: LinearGradient(
-                    colors: [
-                      Color(0xFFFEDA77), 
-                      Color(0xFFF58529), 
-                      Color(0xFFDD2A7B), 
-                      Color(0xFF8134AF), 
-                      Color(0xFF515BD4), 
-                    ],
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
-                  ),
-                ),
-                child: Container(
-                  padding: EdgeInsets.all(2), // Inner white gap
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: Colors.white,
-                  ),
-                  child: CircleAvatar(
-                    radius: 40,
-                    backgroundImage: NetworkImage(
-                      "https://images.genius.com/28f3f303c54e8f1a3bfb81e9b992d8cf.1000x1000x1.png",
-                    ),
-                  ),
-                ),
+              CircleAvatar(
+                radius: 40,
+                backgroundImage:
+                NetworkImage("https://i.imgur.com/QCNbOAo.png"),
               ),
               CircleAvatar(
                 radius: 12,
                 backgroundColor: Colors.blue,
-                child: Icon(Icons.add, color: Colors.white, size: 16),
+                child: Icon(Icons.add, size: 16),
               )
             ],
           ),
-
           const SizedBox(width: 16),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: const [
-              Text("@Wonie_Tixi", style: TextStyle(color: Color.fromARGB(255, 13, 13, 13), fontSize: 20)),
+              Text("@Wonie_Tixi", style: TextStyle(fontSize: 20)),
               SizedBox(height: 4),
-              Text("What's new?", style: TextStyle(color: Color.fromARGB(255, 9, 9, 9))),
+              Text("What's new?"),
             ],
           ),
         ],
@@ -117,10 +108,9 @@ class ProfilePage extends StatelessWidget {
           Container(
             padding: const EdgeInsets.all(8),
             decoration: BoxDecoration(
-              border: Border.all(color: Colors.white),
               borderRadius: BorderRadius.circular(8),
             ),
-            child: const Icon(Icons.person_add, color: Colors.white),
+            child: const Icon(Icons.person_add),
           ),
         ],
       ),
@@ -132,21 +122,22 @@ class ProfilePage extends StatelessWidget {
       alignment: Alignment.center,
       padding: const EdgeInsets.symmetric(vertical: 10),
       decoration: BoxDecoration(
-        border: Border.all(color: Colors.white),
+        border: Border.all(),
         borderRadius: BorderRadius.circular(8),
       ),
-      child: Text(label, style: const TextStyle(color: Colors.white)),
+      child: Text(label),
     );
   }
+
   Widget _buildTabIcons() {
     return const Padding(
       padding: EdgeInsets.only(top: 12),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          Icon(Icons.grid_on, color: Colors.white),
-          Icon(Icons.video_call, color: Colors.grey),
-          Icon(Icons.person_pin_outlined, color: Colors.grey),
+          Icon(Icons.grid_on),
+          Icon(Icons.video_call),
+          Icon(Icons.person_pin_outlined),
         ],
       ),
     );
@@ -160,9 +151,9 @@ class ProfilePage extends StatelessWidget {
         mainAxisSpacing: 4,
         crossAxisSpacing: 4,
       ),
-      itemCount: 50, // replace with user content count
-      shrinkWrap: true, // Important to work inside SingleChildScrollView
-      physics: const NeverScrollableScrollPhysics(), // Prevent inner scrolling
+      itemCount: 50,
+      shrinkWrap: true,
+      physics: const NeverScrollableScrollPhysics(),
       itemBuilder: (context, index) {
         return Image.network(
           'https://picsum.photos/200?random=$index',
@@ -182,8 +173,9 @@ class _StatItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Text(count, style: const TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold)),
-        Text(label, style: const TextStyle(color: Colors.white70)),
+        Text(count,
+            style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+        Text(label),
       ],
     );
   }
