@@ -14,7 +14,7 @@ class InstagramHomePage extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Image.network("https://tse2.mm.bing.net/th/id/OIP.DexBeSiGPUP4igHscKierwHaCi?rs=1&pid=ImgDetMain&o=7&rm=3",width:175.0),
+                Text("Instagram",style: TextStyle(fontSize: 30)),
                 Row(
                   children: const [
                     Icon(Icons.favorite_border,size: 30.0,color: Colors.red),
@@ -38,16 +38,34 @@ class InstagramHomePage extends StatelessWidget {
                 child: Column(
                   children: [
                     Container(
+                      padding: EdgeInsets.all(3), 
                       decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      border: Border.all(color: const Color.fromARGB(255, 240, 30, 121), width: 3),
+                        shape: BoxShape.circle,
+                        gradient: LinearGradient(
+                          colors: [
+                            Color(0xFFFEDA77), 
+                            Color(0xFFF58529), 
+                            Color(0xFFDD2A7B), 
+                            Color(0xFF8134AF), 
+                            Color(0xFF515BD4), 
+                          ],
+                          begin: Alignment.topLeft,
+                          end: Alignment.bottomRight,
+                        ),
                       ),
-                      child:CircleAvatar(
-                      radius: 30,
-                      backgroundImage:
-                      NetworkImage('https://i.pravatar.cc/150?img=$index'),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: Colors.white, 
+                          shape: BoxShape.circle,
+                        ),
+                        padding: EdgeInsets.all(2), 
+                        child: CircleAvatar(
+                          radius: 30,
+                          backgroundImage: NetworkImage('https://i.pravatar.cc/150?img=$index'),
+                        ),
                       ),
                     ),
+
                     SizedBox(height: 4),
                     Text('User$index', style: TextStyle(fontSize: 18)),
                     
@@ -67,10 +85,36 @@ class InstagramHomePage extends StatelessWidget {
                 children: [
                   // Post header
                   ListTile(
-                    leading: CircleAvatar(
-                      backgroundImage:
-                      NetworkImage('https://i.pravatar.cc/150?img=$index'),
+                    leading: Container(
+                      width: 50,
+                      height: 50,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        gradient: LinearGradient(
+                          colors: [
+                            Color(0xFFF58529),
+                            Color(0xFFDD2A7B),
+                            Color(0xFF8134AF),
+                            Color(0xFF515BD4),
+                          ],
+                          begin: Alignment.topLeft,
+                          end: Alignment.bottomRight,
+                        ),
+                      ),
+                      child: Padding(
+                        padding: EdgeInsets.all(3), // border thickness
+                        child: Container(
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: Colors.white, // optional white inner background
+                          ),
+                          child: CircleAvatar(
+                            backgroundImage: NetworkImage('https://i.pravatar.cc/150?img=$index'),
+                          ),
+                        ),
+                      ),
                     ),
+
                     title: Text('User$index',style: TextStyle(fontSize: 18)),
                     trailing: Icon(Icons.more_vert),
                   ),
@@ -99,7 +143,7 @@ class InstagramHomePage extends StatelessWidget {
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 12),
                     child: Text(
-                      'Liked by user123 and others kenh hx sart nas bres mjas tley hx',
+                      'Liked by Lala_la and others ',
                     ),
                   ),
                   SizedBox(height: 12),

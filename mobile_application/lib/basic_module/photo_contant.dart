@@ -1,28 +1,19 @@
-List<String> actorList = [
-  "https://img.etimg.com/thumb/width-1600,height-900,imgsize-25450,resizemode-75,msid-119557011/news/international/us/entertainment/final-destination-bloodlines-when-will-it-release-in-theaters-heres-release-date-trailer-cast-and-plot.jpg",
-  "https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p194483_p_v8_aa.jpg",
-  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRH4itR4T2MqrmfkfZxW4VzFjy1gs6esw2vMw&s",
-  "https://m.media-amazon.com/images/M/MV5BNjIwZWY4ZDEtMmIxZS00NDA4LTg4ZGMtMzUwZTYyNzgxMzk5XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-  "https://www.mercurynews.com/wp-content/uploads/2016/09/20160513_074630_leonardo_dicaprio_24734_13519.jpg?w=640",
-  "https://img.buzzfeed.com/buzzfeed-static/static/2015-03/5/16/tmp/webdr03/e4f4ad1063f92e26722c1a0394c8fcd0-1.jpg?fill=625:625",
-  "https://www.nickiswift.com/img/gallery/actors-who-didnt-get-famous-until-they-were-older-upgrade/intro-1503329975.jpg",
-  "https://images.saymedia-content.com/.image/t_share/MTc2MjYzNDgxODc1MTEzMTUw/famous-and-best-english-actors-and-actresses.jpg",
-  "https://www.thefashionisto.com/wp-content/uploads/2023/09/Brad-Pitt-Blonde-Hair-1.jpg",
-  "https://150074292.v2.pressablecdn.com/wp-content/uploads/2021/12/Will-Smith-768x1103.jpg",
+List<String> imageGrid = [
+    "https://lh3.googleusercontent.com/v52a3hgxBAr5WcZHPJku3N6Bcfc8MdmOjp4X20e4ORTSzWmfbQniyQr7RogPhY13WZ7M4jphWMPynIntU7hMOHwoZRwQswNFbkcPpupeWu7exAk=w960-rj-nu-e365",
+    "https://i.pinimg.com/736x/9e/f8/27/9ef8274bff136b936d05f9c336118666.jpg",
+    "https://th.bing.com/th/id/OIP.XkfAdNNH-7Jxi5BYvWhpowHaLH?cb=iwp2&rs=1&pid=ImgDetMain",
+    "https://i.pinimg.com/originals/bb/fa/7f/bbfa7f28544ff0d0c7ff76a59c2d497b.jpg",
+    "https://0.soompi.io/wp-content/uploads/2021/07/07193706/jisoo-2.jpeg",
+    "https://i.pinimg.com/originals/45/10/40/4510400772db32f9e030529cb362847e.jpg",
+    "https://i.pinimg.com/originals/3a/c6/ea/3ac6eacb48d8db824a7a087cc2c13c8f.jpg",
+    "https://i.pinimg.com/originals/30/d0/e4/30d0e4d74eac7b979fb7098747881181.jpg",
+    "https://0.soompi.io/wp-content/uploads/2023/05/09074338/Doyoung-12.jpg",
+    "https://lh3.googleusercontent.com/v52a3hgxBAr5WcZHPJku3N6Bcfc8MdmOjp4X20e4ORTSzWmfbQniyQr7RogPhY13WZ7M4jphWMPynIntU7hMOHwoZRwQswNFbkcPpupeWu7exAk=w960-rj-nu-e365",
+];
 
-  "https://ciowomenmagazine.com/wp-content/uploads/2024/01/1.1-Scarlett-Johansson-Source-Refinery29.jpg",
-  "https://www.famousafricanamericans.org/images/morgan-freeman.jpg"];
-List<String> imageList =[
-  "https://img.etimg.com/thumb/width-1600,height-900,imgsize-25450,resizemode-75,msid-119557011/news/international/us/entertainment/final-destination-bloodlines-when-will-it-release-in-theaters-heres-release-date-trailer-cast-and-plot.jpg",
-  "https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p194483_p_v8_aa.jpg",
-  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRH4itR4T2MqrmfkfZxW4VzFjy1gs6esw2vMw&s",
-  "https://m.media-amazon.com/images/M/MV5BNjIwZWY4ZDEtMmIxZS00NDA4LTg4ZGMtMzUwZTYyNzgxMzk5XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-  "https://www.mercurynews.com/wp-content/uploads/2016/09/20160513_074630_leonardo_dicaprio_24734_13519.jpg?w=640",
-  "https://img.buzzfeed.com/buzzfeed-static/static/2015-03/5/16/tmp/webdr03/e4f4ad1063f92e26722c1a0394c8fcd0-1.jpg?fill=625:625",
-  "https://www.nickiswift.com/img/gallery/actors-who-didnt-get-famous-until-they-were-older-upgrade/intro-1503329975.jpg",
-  "https://images.saymedia-content.com/.image/t_share/MTc2MjYzNDgxODc1MTEzMTUw/famous-and-best-english-actors-and-actresses.jpg",
-  "https://www.thefashionisto.com/wp-content/uploads/2023/09/Brad-Pitt-Blonde-Hair-1.jpg",
-  "https://150074292.v2.pressablecdn.com/wp-content/uploads/2021/12/Will-Smith-768x1103.jpg",
-  "https://www.famousafricanamericans.org/images/morgan-freeman.jpg",
-  "https://ciowomenmagazine.com/wp-content/uploads/2024/01/1.1-Scarlett-Johansson-Source-Refinery29.jpg",
+List<String> imageList = [
+    "https://www.earwolf.com/wp-content/uploads/2023/06/unspooled-inside-out.jpeg",
+    "https://assets.mycast.io/posters/coco-2-fan-casting-poster-160180-medium.jpg?1641829561",
+    "https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2021/09/Demon-Slayer_-Kimetsu-no-Yaiba-Mugen-Train-Arc-KV.jpg",
+    "https://th.bing.com/th/id/R.e7701ad2a288880629ecf09e2c2c3312?rik=gsDbBYPgqgvyog&pid=ImgRaw&r=0",
 ];

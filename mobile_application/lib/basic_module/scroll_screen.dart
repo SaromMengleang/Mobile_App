@@ -31,9 +31,9 @@ class _VideoScreenState extends State<VideoScreen> {
     return PageView.builder(
       physics: const BouncingScrollPhysics(),
       scrollDirection: Axis.vertical,
-      itemCount: imageList.length,
+      itemCount: imageGrid.length,
       itemBuilder: (context, index) {
-        final item = imageList[index];
+        final item = imageGrid[index];
         return Stack(
           children: [
             // Background Image
@@ -64,7 +64,7 @@ class _VideoScreenState extends State<VideoScreen> {
           ),
           child: const Text("Reels"),
         ),
-        const SizedBox(width: 300),
+        const SizedBox(width: 250),
         IconButton(
           onPressed: () {},
           icon: const Icon(Icons.camera_alt, color: Colors.white, size: 26),
@@ -103,7 +103,17 @@ class _VideoScreenState extends State<VideoScreen> {
               padding:EdgeInsets.all(2),
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                border: Border.all(color: const Color.fromARGB(255, 36, 243, 78), width: 2),
+                gradient: LinearGradient(
+                  colors: [
+                    Color(0xFFFEDA77), 
+                    Color(0xFFF58529), 
+                    Color(0xFFDD2A7B), 
+                    Color(0xFF8134AF), 
+                    Color(0xFF515BD4), 
+                  ],
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                ),
               ),
               child: CircleAvatar(
                 radius: 22,
@@ -113,7 +123,7 @@ class _VideoScreenState extends State<VideoScreen> {
               ),
             ),
             const SizedBox(width: 8),
-            const Text("@JENNIE_ruby", style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold)),
+            const Text("@JENNIE_ruby", style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold)),
             
             const SizedBox(width: 8),
             Container(

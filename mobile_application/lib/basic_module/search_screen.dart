@@ -49,27 +49,53 @@ class _SearchScreenState extends State<SearchScreen>{
     },
     ] ;
     return ListView(
-      children: [
-          Padding(
-            padding: const EdgeInsets.all(12.0),
-            child: Text(
-              'Recent',
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+  children: [
+    Padding(
+      padding: const EdgeInsets.all(12.0),
+      child: Text(
+        'Recent',
+        style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+      ),
+    ),
+    Divider(),
+    ...recentSearches.map((account) {
+      return ListTile(
+        leading: Container(
+          padding: EdgeInsets.all(3), 
+          decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            gradient: LinearGradient(
+              colors: [
+                Color(0xFFFEDA77), 
+                Color(0xFFF58529), 
+                Color(0xFFDD2A7B), 
+                Color(0xFF8134AF), 
+                Color(0xFF515BD4), 
+              ],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
             ),
           ),
-          Divider(),
-          ...recentSearches.map((account) {
-            return ListTile(
-              leading: CircleAvatar(
-                backgroundImage: NetworkImage(account['image']!),
-              ),
-              title: Text(account['username']!),
-              subtitle: Text(account['description']!),
-              trailing: Icon(Icons.close),
-            );
-          })
-        ],
-    );
+          child: Container(
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              color: Colors.white, 
+            ),
+            padding: EdgeInsets.all(2), 
+            child: CircleAvatar(
+              radius: 24,
+              backgroundImage: NetworkImage(account['image']!),
+            ),
+          ),
+        ),
+        title: Text(account['username']!),
+        subtitle: Text(account['description']!),
+        trailing: Icon(Icons.close),
+      );
+    }).toList(),
+  ],
+);
+
   }
 
 }
