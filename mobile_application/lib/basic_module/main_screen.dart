@@ -9,7 +9,7 @@ import 'package:provider/provider.dart';
 import 'package:mobile_application/basic_module/font_theme.dart';
 
 
-// import 'package:mobile_application/basic_module/tiktok_screen.dart';
+
 
 class MainScreen extends StatefulWidget{
   const MainScreen({super.key});
