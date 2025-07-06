@@ -74,9 +74,6 @@ class MainScreenState extends State<MainScreen> {
   }
 
   Widget _buildDrawer() {
-    final logo =
-        "https://play-lh.googleusercontent.com/n9_SKKjuOM-AK9Fmo0UB9dcBVm6bZOXq8_nUtuHSoZbQqxzdNvYIBDLcEE9JpbwN0n_V=w600-h300-pc0xffffff-pd";
-
     int themeIndex = context.watch<ThemeLogic>().themeIndex;
 
     return Drawer(
